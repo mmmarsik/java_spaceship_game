@@ -47,7 +47,7 @@ public class Ship extends Unit implements HealthPoint {
 
     @Override
     public void draw(Graphics g) {
-        System.out.println("Отрисовка корабля: x=" + x + ", y=" + y + ", angle=" + angle);
+        //System.out.println("Отрисовка корабля: x=" + x + ", y=" + y + ", angle=" + angle);
         Graphics2D graphics2D = (Graphics2D) g;
         graphics2D.rotate(angle, x + image.getWidth(null) / 2, y + image.getHeight(null) / 2);
         g.drawImage(image, x, y, null);

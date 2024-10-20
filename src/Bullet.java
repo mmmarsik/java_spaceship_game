@@ -2,7 +2,7 @@ import java.awt.*;
 
 public class Bullet extends Unit {
     public int damage;
-    private Image image;
+    public Image image;
 
     public Bullet(int x, int y, int speed, double angle, Image image, int damage) {
         super(x, y, speed, angle, image);
