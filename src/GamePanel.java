@@ -1,5 +1,3 @@
-import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,6 +10,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.imageio.ImageIO;
+import javax.swing.*;
 
 public class GamePanel extends JPanel implements KeyListener, ActionListener {
     public Ship makaka;
@@ -34,7 +34,6 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
         requestFocusInWindow();
         requestFocus();
         timer = new Timer(50, this);
-        timer.start();
 
         bullets = new ArrayList<>();
         dogBullets = new ArrayList<>();
@@ -58,6 +57,7 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
             System.out.println("Ошибка загрузки изображения.");
             throw new RuntimeException(e);
         }
+        timer.start();
     }
 
     private boolean checkCollision(Bullet bullet, Ship ship) {
